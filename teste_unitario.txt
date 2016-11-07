@@ -1,0 +1,19 @@
+Class msgClasse
+{
+    public static function mensagemMetodo( )
+    {
+        return "Hello World";
+    }
+}
+
+
+require_once 'msgClasse.php';
+require_once 'PHPUnit/Framework/TestCase.php' ;
+
+Class msgClasseTest extends PHPUnit_Framework_TestCase
+{
+    public function testMensagemMetodo( ) {
+        $resultado = msgClasse::mensagemMetodo();
+        $this->assertEquals("Hello World", $resultado);
+    }
+}
